@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Seguridad</title>
+    <meta name="description"
+        content="guía sencilla y accesible para ayudar a usuarios en Venezuela a eliminar archivos temporales y cachés de aplicaciones de mensajería y redes sociales en sus teléfonos Android. Dada la situación política actual, es crucial mantener la privacidad y seguridad de la información personal y evitar la recolección de datos sensibles por parte de entidades gubernamentales.">
+    <meta name="keywords"
+        content="venezuela, venezolanos, seguridad, información personal, borrar caché, borrar archivos temporales, vpn, dictadura">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@heroicons/react@1.0.6/outline.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="bg-white">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Vene-Segura</span>
+                        <img class="h-8 w-auto" src="logo.png" alt="Logo Vene Segura">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button id="menu-toggle" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Abrir menú</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Usar VPN !!!</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Limpiar WhatsApp</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Limpiar Telegram</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Limpiar TikTok</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Limpiar Facebook</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Limpiar Navegador</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Formatear teléfono</a>
+                </div>
+            </nav>
+            <!-- Menú móvil -->
+            <div id="mobile-menu" class="mobile-menu inset-0 z-50 w-full bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 hidden">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Vene-Segura</span>
+                        <img class="h-8 w-auto" src="logo.png" alt="Logo Vene Segura">
+                    </a>
+                    <button id="menu-close" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Cerrar menú</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Usar
+                                VPN !!!</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Limpiar
+                                WhatsApp</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Limpiar
+                                Telegram</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Limpiar
+                                TikTok</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Limpiar
+                                Facebook</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Limpiar
+                                Navegador</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Formatear
+                                teléfono</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Recomendaciones de Seguridad
+                    </h1>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">
+                        Este proyecto tiene como objetivo proporcionar una guía sencilla y accesible para ayudar a
+                        usuarios en
+                        Venezuela a eliminar archivos temporales y cachés de aplicaciones de mensajería y redes sociales
+                        en sus
+                        teléfonos Android. Dada la situación política actual, es crucial mantener la privacidad y
+                        seguridad de la
+                        información personal y evitar la recolección de datos sensibles por parte de entidades
+                        gubernamentales o ciberdelincuentes.
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#"
+                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Comenzar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div
+            class="mx-auto max-w-2xl gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:items-start lg:gap-y-10">
+            <div
+                class="lg:mx-auto lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="lg:max-w-lg">
+                        <p class="text-base font-semibold leading-7 text-indigo-600">Eliminar Caché y Archivos Temporales, Chats</p>
+                        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">WhatsApp
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                        <p>
+                            <ol class="list-decimal pl-6">
+                                <li>Abrir WhatsApp.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Abrir WhatsApp" class="mx-auto">
+                                </div>
+                                <li>Ir a Configuración > Almacenamiento y datos > Gestionar Almacenamiento.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Gestionar Almacenamiento"
+                                        class="mx-auto">
+                                </div>
+                                <li>Eliminar archivos grandes y reenviados.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300"
+                                        alt="Eliminar archivos grandes y reenviados" class="mx-auto">
+                                </div>
+                                <li>En Configuración del teléfono, ve a Aplicaciones > WhatsApp > Almacenamiento > Borrar caché.
+                                </li>
+                                <!-- Pestañas para diferentes dispositivos -->
+                                <div class="my-4">
+                                    <div class="flex border-b">
+                                        <button class="tab-link px-4 py-2 text-blue-600 border-b-2 border-blue-600"
+                                            onclick="openTab('android')">Android</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600" onclick="openTab('ios')">iOS</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600"
+                                            onclick="openTab('desktop')">Escritorio</button>
+                                    </div>
+                                    <div id="android" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Android" class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="ios" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300" alt="Borrar caché en iOS"
+                                                class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="desktop" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Escritorio" class="mx-auto">
+                                            <p class="text-center text-sm text-gray-500">Fuente: <a
+                                                    href="https://www.xatakamovil.com" class="text-blue-500 underline">Xataka
+                                                    Móvil</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="lg:mx-auto lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="lg:max-w-lg">
+                        <p class="text-base font-semibold leading-7 text-indigo-600">Eliminar Caché y Archivos Temporales, Chats</p>
+                        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Telegram
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                        <p>
+                            <ol class="list-decimal pl-6">
+                                <li>Abrir Telegram.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Abrir WhatsApp" class="mx-auto">
+                                </div>
+                                <li>Ir a Configuración > Almacenamiento y datos > Gestionar Almacenamiento.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Gestionar Almacenamiento"
+                                        class="mx-auto">
+                                </div>
+                                <li>Eliminar archivos grandes y reenviados.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300"
+                                        alt="Eliminar archivos grandes y reenviados" class="mx-auto">
+                                </div>
+                                <li>En Configuración del teléfono, ve a Aplicaciones > Telegram > Almacenamiento > Borrar caché.
+                                </li>
+                                <!-- Pestañas para diferentes dispositivos -->
+                                <div class="my-4">
+                                    <div class="flex border-b">
+                                        <button class="tab-link px-4 py-2 text-blue-600 border-b-2 border-blue-600"
+                                            onclick="openTab('android')">Android</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600" onclick="openTab('ios')">iOS</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600"
+                                            onclick="openTab('desktop')">Escritorio</button>
+                                    </div>
+                                    <div id="android" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Android" class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="ios" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300" alt="Borrar caché en iOS"
+                                                class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="desktop" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Escritorio" class="mx-auto">
+                                            <p class="text-center text-sm text-gray-500">Fuente: <a
+                                                    href="https://www.xatakamovil.com" class="text-blue-500 underline">Xataka
+                                                    Móvil</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="lg:mx-auto lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="lg:max-w-lg">
+                        <p class="text-base font-semibold leading-7 text-indigo-600">Eliminar Caché y Archivos Temporales, Chats</p>
+                        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Facebook
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                        <p>
+                            <ol class="list-decimal pl-6">
+                                <li>Abrir Facebook.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Abrir WhatsApp" class="mx-auto">
+                                </div>
+                                <li>Ir a Configuración y privacidad > Configuración > Permisos > Explorador.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300" alt="Gestionar Almacenamiento"
+                                        class="mx-auto">
+                                </div>
+                                <li>Borrar datos del navegador.</li>
+                                <div class="text-center my-4">
+                                    <img src="https://via.placeholder.com/300x300"
+                                        alt="Eliminar archivos grandes y reenviados" class="mx-auto">
+                                </div>
+                                <li>En Configuración del teléfono, ve a Aplicaciones > Facebook > Almacenamiento > Borrar caché.
+                                </li>
+                                <!-- Pestañas para diferentes dispositivos -->
+                                <div class="my-4">
+                                    <div class="flex border-b">
+                                        <button class="tab-link px-4 py-2 text-blue-600 border-b-2 border-blue-600"
+                                            onclick="openTab('android')">Android</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600" onclick="openTab('ios')">iOS</button>
+                                        <button class="tab-link px-4 py-2 text-gray-600"
+                                            onclick="openTab('desktop')">Escritorio</button>
+                                    </div>
+                                    <div id="android" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Android" class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="ios" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300" alt="Borrar caché en iOS"
+                                                class="mx-auto">
+                                        </div>
+                                    </div>
+                                    <div id="desktop" class="tab-content">
+                                        <div class="text-center my-4">
+                                            <img src="https://via.placeholder.com/300x300"
+                                                alt="Borrar caché en Escritorio" class="mx-auto">
+                                            <p class="text-center text-sm text-gray-500">Fuente: <a
+                                                    href="https://www.xatakamovil.com" class="text-blue-500 underline">Xataka
+                                                    Móvil</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-4">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-2">Eliminar Caché y Archivos Temporales</h2>
+            <ul class="list-disc pl-6">
+                <li><strong>Instagram:</strong>
+                    <ol class="list-decimal pl-6">
+                        <li>Abrir Instagram.</li>
+                        <li>Ir a Configuración > Seguridad > Acceso a datos.</li>
+                        <li>Eliminar actividad.</li>
+                        <li>En Configuración del teléfono, ve a Aplicaciones > Instagram > Almacenamiento > Borrar
+                            caché.</li>
+                    </ol>
+                </li>
+                <li><strong>TikTok:</strong>
+                    <ol class="list-decimal pl-6">
+                        <li>Abrir TikTok.</li>
+                        <li>Ir a Configuración y privacidad > Liberar espacio.</li>
+                        <li>En Configuración del teléfono, ve a Aplicaciones > TikTok > Almacenamiento > Borrar caché.
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-semibold mb-2">Recomendaciones de Seguridad Anti Espionaje</h2>
+            <ul class="list-disc pl-6">
+                <li>Usar contraseñas fuertes y únicas para cada aplicación.</li>
+                <li>Activar la autenticación de dos factores (2FA) en todas las aplicaciones que lo permitan.</li>
+                <li>Desactivar el servicio de ubicación a menos que sea absolutamente necesario.</li>
+                <li>Mantener todas las aplicaciones y el sistema operativo actualizados.</li>
+                <li>Preferir aplicaciones de mensajería que ofrecen cifrado de extremo a extremo, como Signal.</li>
+                <li>No conectarse a redes Wi-Fi públicas no seguras.</li>
+                <li>Usar una VPN confiable para navegar en internet. <a href="vpn.html"
+                        class="text-blue-500 underline">Más información</a></li>
+                <li>Limpiar regularmente el historial de navegación y cookies en los navegadores web.</li>
+            </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-semibold mb-2">Configuración de Seguridad en Aplicaciones</h2>
+            <ul class="list-disc pl-6">
+                <li><strong>WhatsApp y Telegram:</strong>
+                    <ol class="list-decimal pl-6">
+                        <li>Configurar el auto-borrado de mensajes en chats sensibles.</li>
+                        <li>Activar el cifrado de extremo a extremo (ya activado por defecto).</li>
+                    </ol>
+                </li>
+                <li><strong>Facebook e Instagram:</strong>
+                    <ol class="list-decimal pl-6">
+                        <li>Configurar la cuenta como privada.</li>
+                        <li>Revisar y ajustar configuraciones de privacidad regularmente.</li>
+                    </ol>
+                </li>
+                <li><strong>TikTok:</strong>
+                    <ol class="list-decimal pl-6">
+                        <li>Revisar y ajustar configuraciones de privacidad.</li>
+                        <li>Desactivar las opciones de sincronización de contactos y permisos innecesarios.</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
